@@ -1,66 +1,68 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    margin: 0;
+.welcome-text {
     font-size: 3em;
+    animation: changeText 10s infinite;
 }
 
-nav {
-    background: #444;
-    padding: 10px 0;
-    text-align: center;
+@keyframes changeText {
+    0% { content: "Zpherion'a Hoşgeldiniz!"; }
+    25% { content: "Welcome to Zpherion!"; }
+    50% { content: "Bienvenido a Zpherion!"; }
+    75% { content: "Bienvenue à Zpherion!"; }
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.content-section {
+    padding: 50px 20px;
+    background-color: white;
+    color: black;
+    transition: background-color 1s, color 1s;
 }
 
-nav ul li {
-    display: inline;
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nav-link {
     margin: 0 15px;
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.nav-link:hover {
+    color: gray;
 }
 
 section {
-    padding: 50px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
-section#about {
-    background-color: #e2e2e2;
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-section#features {
-    background-color: #c2c2c2;
+section p {
+    font-size: 1.2em;
 }
-
-section#contact {
-    background-color: #a2a2a2;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
